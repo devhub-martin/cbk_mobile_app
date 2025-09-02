@@ -29,6 +29,7 @@ jobs:
     - name: Create SPA 404 fallback
       run: |
         cp build/index.html build/404.html
+        touch build/.nojekyll
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
