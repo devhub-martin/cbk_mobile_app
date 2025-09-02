@@ -5,7 +5,8 @@
 
   export default defineConfig({
     plugins: [react()],
-    base: process.env.NODE_ENV === 'production' ? '/cbk_mobile_app/' : '/',
+    // For GitHub Pages deployment under the repository name
+    base: '/cbk_mobile_app/',
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -53,6 +54,7 @@
     build: {
       target: 'esnext',
       outDir: 'build',
+      emptyOutDir: true,
     },
     server: {
       port: 3000,
